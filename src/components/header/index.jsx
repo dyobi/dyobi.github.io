@@ -2,6 +2,9 @@ import { useState, useEffect } from 'react';
 import { CgMenuGridO } from 'react-icons/cg';
 import $ from 'jquery';
 
+import Github from '../../assets/icons/github.png';
+import Linkedin from '../../assets/icons/linkedin.png';
+
 import './index.css';
 
 const TopNav = () => {
@@ -13,8 +16,22 @@ const TopNav = () => {
 };
 
 const SideNav = () => {
+
+	const _handleLink = (val) => {
+		let url = val === 1 ? 'https://github.com/dyobi' : 'https://www.linkedin.com/in/dyobi/';
+
+		window.open(url, '_blank');
+	};
+
 	return (
 		<div className='side_nav'>
+			<div className='main_menu_top'>
+				<div className='main_menu_logo'>
+					<div className='main_logo_img' />
+					<span>Luke</span>
+				</div>
+				<span>Web Developer</span>
+			</div>
 			<div className='main_menu'>
 				<div className='each_menu'>
 					<div>
@@ -40,6 +57,10 @@ const SideNav = () => {
 						<span>ontact</span>
 					</div>
 				</div>
+			</div>
+			<div className='main_menu_bottom'>
+				<img src={Github} className='link_icon' alt='' onClick={() => _handleLink(1)} />
+				<img src={Linkedin} className='link_icon' alt='' onClick={() => _handleLink(2)} />
 			</div>
 		</div>
 	);

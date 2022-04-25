@@ -8,6 +8,10 @@ body {
 	transition: 300ms;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 .core {
     transition: 300ms;
 }
