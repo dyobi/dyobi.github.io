@@ -12,13 +12,6 @@ body {
     transition: 300ms;
 }
 
-#canvas {
-    position: absolute;
-    
-    width: 100%;
-    height: 100%;
-}
-
 /* body::before {
     content: '<html>\a    <body>';
 	white-space: pre;

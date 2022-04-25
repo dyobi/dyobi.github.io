@@ -1,6 +1,7 @@
 import Wrapper from 'react-div-100vh';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
+import MouseMove from '../mousemove';
 import Header from '../header';
 import About from '../../views/about';
 import Skills from '../../views/skills';
@@ -14,14 +15,14 @@ const Component = () => {
       <style>
         {`
 					:root {
-						--color-bgc: #F6F6F6;
+						--color-bgc: #1D1D1D;
             --color-gray: #909096;
 					}
 				`}
       </style>
       <BrowserRouter>
         <Header />
-        <canvas id='canvas' width={window.innerWidth} height={window.innerHeight}></canvas>
+        <MouseMove />
         <div className='core'>
           <Routes>
             <Route path='/' element={<Navigate replace to='/about' />} />

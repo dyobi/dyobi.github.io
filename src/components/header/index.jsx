@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { CgMenuGridO } from 'react-icons/cg';
 import $ from 'jquery';
 
 import './index.css';
@@ -6,7 +7,7 @@ import './index.css';
 const TopNav = () => {
 	return (
 		<div className='top_nav'>
-			hello
+			<CgMenuGridO className='nav_icon' />
 		</div>
 	);
 };
@@ -53,18 +54,26 @@ const Component = () => {
 
 		if (width > 1000) {
 			$('.side_nav').css('opacity', 1);
+			$('.side_nav').css('transform', 'translateX(0)');
+
 			$('.top_nav').css('opacity', 0);
+			$('.top_nav').css('transform', 'translateY(-100%)');
+
 			$('.core').css('padding-left', '130px');
-			$('.core').css('padding-top', '0');
+			// $('.core').css('padding-top', '0');
 			$('.core').css('width', 'calc(100% - 130px)');
-			$('.core').css('height', '100vh');
+			// $('.core').css('height', '100vh');
 		} else {
 			$('.side_nav').css('opacity', 0);
+			$('.side_nav').css('transform', 'translateX(-100%)');
+
 			$('.top_nav').css('opacity', 1);
+			$('.top_nav').css('transform', 'translateY(0)');
+
 			$('.core').css('padding-left', '0');
-			$('.core').css('padding-top', '60px');
+			// $('.core').css('padding-top', '60px');
 			$('.core').css('width', '100%');
-			$('.core').css('height', 'calc(100vh - 60px)');
+			// $('.core').css('height', 'calc(100vh - 60px)');
 		}
 	}, [width]);
 
