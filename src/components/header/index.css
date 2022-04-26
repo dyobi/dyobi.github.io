@@ -1,4 +1,34 @@
-.top_nav {
+.top_nav_left {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	position: fixed;
+	top: 10px;
+	left: 10px;
+
+	width: 36px;
+	height: 50px;
+
+	background-color: rgba(0, 0, 0, 0.4);
+	border-radius: 8px;
+
+	opacity: 0;
+	cursor: pointer;
+	z-index: 1;
+	transform: translateY(-100%);
+	transition: 500ms;
+}
+
+.top_nav_left>.nav_logo {
+	width: 23.4px;
+	height: 33.2px;
+
+	background-color: #FFFFFF;
+	transition: 300ms;
+}
+
+.top_nav_right {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -20,7 +50,7 @@
 	transition: 500ms;
 }
 
-.top_nav>.nav_icon {
+.top_nav_right>.nav_icon {
 	width: 42px;
 	height: 42px;
 
@@ -28,8 +58,17 @@
 	transition: 300ms;
 }
 
-.top_nav:hover>.nav_icon {
-	transform: rotate(90deg);
+.top_nav_left:hover,
+.top_nav_right:hover {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.top_nav_right:hover>.nav_icon {
+	animation: nav_icon 500ms ease-in-out infinite alternate;
+}
+
+.top_nav_left:hover>.nav_logo {
+	animation: nav_icon_logo 500ms ease-in-out infinite alternate;
 }
 
 .side_nav {
@@ -37,7 +76,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	position: absolute;
+	position: fixed;
 
 	width: 130px;
 	height: 100%;
@@ -74,6 +113,11 @@
 	cursor: pointer;
 }
 
+.side_nav>.main_menu_top>.main_menu_logo:hover>span {
+	color: #F7F7F7;
+	animation: side_text 500ms ease-in-out infinite alternate;
+}
+
 .side_nav>.main_menu_top>.main_menu_logo>.main_logo_img {
 	width: 57.2px;
 	height: 79.2px;
@@ -94,6 +138,8 @@
 	font-weight: 600;
 	text-align: center;
 	letter-spacing: -1.6px;
+
+	transition: 500ms;
 }
 
 .side_nav>.main_menu_top>span {
@@ -184,5 +230,23 @@
 	}
 	100% {
 		filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%) drop-shadow(0 0 5px #777777) drop-shadow(0 0 10px #777777) drop-shadow(0 0 15px #777777);
+	}
+}
+
+@keyframes nav_icon {
+	0% {
+		transform: rotate(90deg) scale(0.95);
+	}
+	100% {
+		transform: scale(1.05);
+	}
+}
+
+@keyframes nav_icon_logo {
+	0% {
+		transform: scale(0.95);
+	}
+	100% {
+		transform: scale(1.05);
 	}
 }

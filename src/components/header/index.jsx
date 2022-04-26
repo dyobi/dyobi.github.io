@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { CgMenuGridO } from 'react-icons/cg';
 import $ from 'jquery';
 
@@ -8,17 +9,27 @@ import Linkedin from '../../assets/icons/linkedin.png';
 import './index.css';
 
 const TopNav = () => {
+
+	const navigate = useNavigate();
+
 	return (
-		<div className='top_nav'>
-			<CgMenuGridO className='nav_icon' />
-		</div>
+		<>
+			<div className='top_nav_left' onClick={() => navigate('/')}>
+				<div className='nav_logo'></div>
+			</div>
+			<div className='top_nav_right'>
+				<CgMenuGridO className='nav_icon' />
+			</div>
+		</>
 	);
 };
 
 const SideNav = () => {
 
+	const navigate = useNavigate();
+
 	const _handleLink = (val) => {
-		let url = val === 1 ? 'https://github.com/dyobi' : 'https://www.linkedin.com/in/dyobi/';
+		let url = val === 1 ? 'https://github.com/dyobi' : 'https://www.linkedin.com/in/dyobi';
 
 		window.open(url, '_blank');
 	};
@@ -26,32 +37,32 @@ const SideNav = () => {
 	return (
 		<div className='side_nav'>
 			<div className='main_menu_top'>
-				<div className='main_menu_logo'>
+				<div className='main_menu_logo' onClick={() => navigate('/')}>
 					<div className='main_logo_img' />
 					<span>Luke</span>
 				</div>
 				<span>Web Developer</span>
 			</div>
 			<div className='main_menu'>
-				<div className='each_menu'>
+				<div className='each_menu' onClick={() => navigate('/about')}>
 					<div>
 						<span className='first_letter'>A</span>
 						<span>bout</span>
 					</div>
 				</div>
-				<div className='each_menu'>
+				<div className='each_menu' onClick={() => navigate('/skills')}>
 					<div>
 						<span className='first_letter'>S</span>
 						<span>kills</span>
 					</div>
 				</div>
-				<div className='each_menu'>
+				<div className='each_menu' onClick={() => navigate('/work')}>
 					<div>
 						<span className='first_letter'>W</span>
 						<span>ork</span>
 					</div>
 				</div>
-				<div className='each_menu'>
+				<div className='each_menu' onClick={() => navigate('/contact')}>
 					<div>
 						<span className='first_letter'>C</span>
 						<span>ontact</span>
@@ -77,24 +88,26 @@ const Component = () => {
 			$('.side_nav').css('opacity', 1);
 			$('.side_nav').css('transform', 'translateX(0)');
 
-			$('.top_nav').css('opacity', 0);
-			$('.top_nav').css('transform', 'translateY(-100%)');
+			$('.top_nav_left').css('opacity', 0);
+			$('.top_nav_left').css('transform', 'translateY(-100%)');
+
+			$('.top_nav_right').css('opacity', 0);
+			$('.top_nav_right').css('transform', 'translateY(-100%)');
 
 			$('.core').css('padding-left', '130px');
-			// $('.core').css('padding-top', '0');
 			$('.core').css('width', 'calc(100% - 130px)');
-			// $('.core').css('height', '100vh');
 		} else {
 			$('.side_nav').css('opacity', 0);
 			$('.side_nav').css('transform', 'translateX(-100%)');
 
-			$('.top_nav').css('opacity', 1);
-			$('.top_nav').css('transform', 'translateY(0)');
+			$('.top_nav_left').css('opacity', 1);
+			$('.top_nav_left').css('transform', 'translateY(0)');
+
+			$('.top_nav_right').css('opacity', 1);
+			$('.top_nav_right').css('transform', 'translateY(0)');
 
 			$('.core').css('padding-left', '0');
-			// $('.core').css('padding-top', '60px');
 			$('.core').css('width', '100%');
-			// $('.core').css('height', 'calc(100vh - 60px)');
 		}
 	}, [width]);
 

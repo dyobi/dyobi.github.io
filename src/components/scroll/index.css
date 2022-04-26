@@ -1,0 +1,64 @@
+@media (min-width: 1001px) {
+	.scroll_down.left {
+		left: 130px;
+	}
+}
+
+@media (max-width: 1000px) {
+	.scroll_down.left {
+		left: 0;
+	}
+}
+
+.scroll_down {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	position: fixed;
+	bottom: 0;
+
+	padding: 10px 6px;
+
+	font-size: 14px;
+	color: #DDDDDD;
+
+	transition: 500ms;
+}
+
+.scroll_down.right {
+	right: 0;
+}
+
+.scroll_down>span {
+	margin: 0 0 10px 2px;
+
+	font-weight: 300;
+	writing-mode: vertical-lr;
+    text-orientation: mixed;
+	
+	animation: scroll_bounce 1200ms ease-in-out infinite alternate;
+}
+
+.scroll_down>.scroll_icon {
+	margin-bottom: 8px;
+	width: 20px;
+	height: 20px;
+	transform: rotate(45deg);
+}
+
+@keyframes scroll_bounce {
+	0% {
+		transform: translateY(0);
+		letter-spacing: -1px;
+	}
+	50% {
+		transform: translateY(-8px);
+		letter-spacing: -0.2px;
+	}
+	100% {
+		transform: translateY(0);
+		letter-spacing: -1px;
+	}
+}

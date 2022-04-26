@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 import MouseMove from '../mousemove';
 import Header from '../header';
+
+import Home from '../../views/home';
 import About from '../../views/about';
 import Skills from '../../views/skills';
 
@@ -25,12 +27,12 @@ const Component = () => {
         <MouseMove />
         <div className='core'>
           <Routes>
-            <Route path='/' element={<Navigate replace to='/about' />} />
+            <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
             <Route path='/skills' element={<Skills />} />
             {/* <Route path='/portfolio' element={<Core page='0' />} /> */}
             {/* <Route path='/contact' element={<Core page='0' />} /> */}
-            <Route path='*' element={<Navigate replace to='/about' />} />
+            <Route path='*' element={<Navigate replace to='/' />} />
           </Routes>
         </div>
       </BrowserRouter>
