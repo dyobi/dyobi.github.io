@@ -24,7 +24,6 @@
 	width: 23.4px;
 	height: 33.2px;
 
-	background-color: #FFFFFF;
 	transition: 300ms;
 }
 
@@ -121,8 +120,6 @@
 .side_nav>.main_menu_top>.main_menu_logo>.main_logo_img {
 	width: 57.2px;
 	height: 79.2px;
-
-	background-color: #fff;
 }
 
 .side_nav>.main_menu_top>.main_menu_logo>span {

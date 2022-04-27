@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { CgMenuGridO } from 'react-icons/cg';
 import $ from 'jquery';
 
+import Logo from '../../assets/icons/logo.png';
 import Github from '../../assets/icons/github.png';
 import Linkedin from '../../assets/icons/linkedin.png';
 
@@ -15,7 +16,7 @@ const TopNav = () => {
 	return (
 		<>
 			<div className='top_nav_left' onClick={() => navigate('/')}>
-				<div className='nav_logo'></div>
+				<img src={Logo} className='nav_logo' alt='' />
 			</div>
 			<div className='top_nav_right'>
 				<CgMenuGridO className='nav_icon' />
@@ -38,7 +39,7 @@ const SideNav = () => {
 		<div className='side_nav'>
 			<div className='main_menu_top'>
 				<div className='main_menu_logo' onClick={() => navigate('/')}>
-					<div className='main_logo_img' />
+					<img src={Logo} className='main_logo_img' alt='' />
 					<span>Luke</span>
 				</div>
 				<span>Web Developer</span>
