@@ -1,3 +1,7 @@
+import Image1 from '../../assets/images/img1.png';
+import Image2 from '../../assets/images/img2.png';
+import Image3 from '../../assets/images/img3.png';
+
 import './index.css';
 
 const Component = () => {
@@ -44,9 +48,9 @@ const Component = () => {
 					</div>
 				</div>
 				<div className='profile_zone'>
-					<div className='profile_image' />
-					<div className='profile_image' />
-					<div className='profile_image' />
+					<img className='profile_image' src={Image1} alt='' />
+					<img className='profile_image' src={Image2} alt='' />
+					<img className='profile_image' src={Image3} alt='' />
 				</div>
 			</div>
 		</>
