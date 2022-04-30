@@ -6,6 +6,8 @@ const _initOscillator = (canvas) => {
 
 	let target = {},
 		tendrils = [],
+		scroll = 0,
+		windowHeight = document.body.scrollHeight,
 		settings = {
 			debug: false,
 			friction: 0.5,
@@ -98,7 +100,7 @@ const _initOscillator = (canvas) => {
 
 		draw() {
 			let x = this.nodes[0].x,
-				y = this.nodes[0].y,
+				y = this.nodes[0].y + scroll,
 				a, b;
 
 			ctx.beginPath();
@@ -110,13 +112,12 @@ const _initOscillator = (canvas) => {
 				x = (a.x + b.x) * 0.5;
 				y = (a.y + b.y) * 0.5;
 
-				ctx.quadraticCurveTo(a.x, a.y, x, y);
+				ctx.quadraticCurveTo(a.x, a.y + scroll, x, y + scroll);
 			}
-
 			a = this.nodes[i];
 			b = this.nodes[i + 1];
 
-			ctx.quadraticCurveTo(a.x, a.y, b.x, b.y);
+			ctx.quadraticCurveTo(a.x, a.y + scroll, b.x, b.y + scroll);
 			ctx.stroke();
 			ctx.closePath();
 		};
@@ -126,9 +127,9 @@ const _initOscillator = (canvas) => {
 		document.removeEventListener('mousemove', _init);
 		document.removeEventListener('touchstart', _init);
 
-		document.addEventListener('mousemove', _mousemove, {passive:false});
-		document.addEventListener('touchmove', _mousemove, {passive:false});
-		document.addEventListener('touchstart', _touchstart, {passive:false});
+		document.addEventListener('mousemove', _mousemove, { passive: false });
+		document.addEventListener('touchmove', _mousemove, { passive: false });
+		document.addEventListener('touchstart', _touchstart, { passive: false });
 
 		_mousemove(e);
 		_reset();
@@ -149,6 +150,11 @@ const _initOscillator = (canvas) => {
 		if (!ctx.running) {
 			return;
 		} else {
+			if (windowHeight !== document.body.scrollHeight) {
+				windowHeight = document.body.scrollHeight;
+				_resize();
+				scroll = 0;
+			}
 			ctx.globalCompositeOperation = 'source-over';
 			ctx.fillStyle = '#1D1D1D';
 			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
@@ -169,8 +175,12 @@ const _initOscillator = (canvas) => {
 
 	const _resize = () => {
 		ctx.canvas.width = window.innerWidth;
-		ctx.canvas.height = window.innerHeight;
+		ctx.canvas.height = document.body.scrollHeight;
 	};
+
+	const _scroll = () => {
+		scroll = window.scrollY || document.documentElement.scrollTop;
+	}
 
 	const _start = () => {
 		if (!ctx.running) {
@@ -219,10 +229,11 @@ const _initOscillator = (canvas) => {
 			offset: 285
 		});
 
-		document.addEventListener('mousemove', _init, {passive:false});
-		document.addEventListener('touchstart', _init, {passive:false});
+		document.addEventListener('mousemove', _init, { passive: false });
+		document.addEventListener('touchstart', _init, { passive: false });
 		document.body.addEventListener('orientationchange', _resize);
 		window.addEventListener('resize', _resize);
+		window.addEventListener('scroll', _scroll);
 		window.addEventListener('focus', _start);
 		window.addEventListener('blur', _stop);
 
@@ -238,7 +249,7 @@ const Component = () => {
 	useEffect(() => {
 		const canvas = canvasRef.current;
 		canvas.width = window.innerWidth;
-		canvas.height = window.innerHeight;
+		canvas.height = document.body.scrollHeight;
 
 		_initOscillator(canvasRef.current);
 	}, []);
