@@ -114,3 +114,43 @@ body::-webkit-scrollbar {
         font-size: 24px;
     }
 }
+
+@keyframes rubberBand {
+	0% {
+		transform: scale3d(1, 1, 0.1);
+	}
+
+	30% {
+		transform: scale3d(1.25, 0.75, 0.1);
+	}
+
+	40% {
+		transform: scale3d(0.75, 1.25, 0.1);
+	}
+
+	50% {
+		transform: scale3d(1.15, 0.85, 0.1);
+	}
+
+	65% {
+		transform: scale3d(.95, 1.05, 0.1);
+	}
+
+	75% {
+		transform: scale3d(1.05, .95, 0.1);
+	}
+
+	100% {
+		transform: scale3d(1, 1, 0.1);
+	}
+}
+
+@keyframes slide_effect {
+	0% {
+		transform: translateX(-0.3rem);
+	}
+
+	100% {
+		transform: translateX(0.1rem);
+	}
+}
