@@ -196,7 +196,7 @@ const _initOscillator = (canvas) => {
 	const _mousemove = (e) => {
 		if (e.touches) {
 			target.x = e.touches[0].pageX;
-			target.y = e.touches[0].pageY;
+			target.y = e.touches[0].pageY - scroll;
 		} else {
 			target.x = e.clientX
 			target.y = e.clientY;
@@ -207,7 +207,7 @@ const _initOscillator = (canvas) => {
 	const _touchstart = (e) => {
 		if (e.touches.length === 1) {
 			target.x = e.touches[0].pageX;
-			target.y = e.touches[0].pageY;
+			target.y = e.touches[0].pageY - scroll;
 		}
 	};
 

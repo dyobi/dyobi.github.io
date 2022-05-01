@@ -11,6 +11,7 @@ const Component = () => {
 
 	const myTags = [
 		'JavaScript', 'CSS', 'HTML',
+		'Java', 'C', 'Python',
 		'React', 'Redux', 'Jsp',
 		'JQuery', 'NodeJS', 'Spring',
 		'Spring Boot', 'Jpa', 'React Native',

@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom';
+
 import Image1 from '../../assets/images/img1.png';
 import Image2 from '../../assets/images/img2.png';
 import Image3 from '../../assets/images/img3.png';
@@ -5,6 +7,9 @@ import Image3 from '../../assets/images/img3.png';
 import './index.css';
 
 const Component = () => {
+
+	const navigate = useNavigate();
+
 	return (
 		<div className='section_home_main_info'>
 			<div className='text_zone'>
@@ -42,7 +47,7 @@ const Component = () => {
 					<span>.</span>
 				</h1>
 				<p>Full Stack Developer / Creative Engineer</p>
-				<div className='contact_form'>
+				<div className='contact_form' onClick={() => navigate('/contact')}>
 					<span>Contact me</span>
 				</div>
 			</div>
