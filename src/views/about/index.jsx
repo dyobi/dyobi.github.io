@@ -50,7 +50,7 @@ const Component = () => {
 				<span>Dedicated and efficient full stack developer located in California with 2+ years personal experience in application layers, presentation layers, and databases.</span>
 				<span>Well-organized person, problem solver, independent employee with high attention to detail. Huge fan of carom billiards, outdoor activities, Netflix series and traveling.</span>
 				<span>Passionate about the entire front-end &amp; back-end spectrum and going to work on ambitious projects with positive mindset.</span>
-				<p onClick={() => navigate('/contact')}>Let's make something special.</p>
+				<span className='span_link' onClick={() => navigate('/contact')}>Let's make something special.</span>
 			</div>
 			<div className='canvas_zone' />
 		</div>

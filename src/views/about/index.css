@@ -70,21 +70,16 @@
 	line-height: 23px;
 }
 
-.about_container>.text_zone>p {
-	margin: 12px 0;
-	padding: 0 12px;
-
+.about_container>.text_zone>.span_link {
+	margin-right: auto;
 	color: #EB8AA6;
-	font-size: 15.6px;
 	font-weight: 500;
-	letter-spacing: 0.4px;
-	line-height: 23px;
 
 	cursor: pointer;
 	transition: 300ms;
 }
 
-.about_container>.text_zone>p:hover {
+.about_container>.text_zone>.span_link:hover {
 	opacity: 0.6;
 }
 

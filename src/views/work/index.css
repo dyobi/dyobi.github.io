@@ -1,0 +1,119 @@
+@media (min-width: 1201px) {
+	.work_container>.grid_zone {
+		grid-template-columns: repeat(auto-fill, calc(16.666666%));
+	}
+}
+
+@media (min-width: 1001px) and (max-width: 1200px) {
+	.work_container>.grid_zone {
+		grid-template-columns: repeat(auto-fill, calc(20%));
+	}
+}
+
+@media (min-width: 601px) and (max-width: 1000px) {
+	.work_container>.grid_zone {
+		grid-template-columns: repeat(auto-fill, calc(25%));
+	}
+}
+
+@media (max-width: 600px) {
+	.work_container>.grid_zone {
+		grid-template-columns: repeat(auto-fill, calc(33.3333333%));
+	}
+}
+
+.work_container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	padding: 80px 30px;
+	width: calc(100% - 60px);
+	height: calc(100% - 160px);
+}
+
+.work_container>.text_zone {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	width: 100%;
+}
+
+.work_container>.text_zone>h2 {
+	margin: 20px 0;
+	padding: 0;
+
+	font-size: 2.6rem;
+	font-weight: 600;
+	letter-spacing: -2px;
+
+	transition: 300ms;
+}
+
+.work_container>.text_zone>h2>span {
+	background: -webkit-linear-gradient(#E7527C, #F8E8DC);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	animation-duration: 800ms;
+	animation-fill-mode: both;
+	animation-iteration-count: 1;
+	display: inline-block;
+}
+
+.work_container>.text_zone>h2>span:hover {
+	animation-name: rubberBand;
+
+	background: -webkit-linear-gradient(#F8E8DC, #E7527C);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.work_container>.text_zone>span {
+	margin: 12px 0;
+	padding: 0 12px;
+
+	color: #FFFFFF;
+	font-size: 15.6px;
+	font-weight: 300;
+	letter-spacing: 0.4px;
+	line-height: 23px;
+}
+
+.work_container>.text_zone>span>.span_link {
+	color: #EB8AA6;
+	font-weight: 500;
+
+	cursor: pointer;
+	transition: 300ms;
+}
+
+.work_container>.text_zone>span>.span_link:hover {
+	opacity: 0.6;
+}
+
+.work_container>.grid_zone {
+	display: grid;
+
+	margin-right: auto;
+	padding: 2rem 0 1rem 0;
+	width: 100%;
+	max-width: 1200px;
+
+	color: white;
+}
+
+.work_container>.grid_zone>div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	position: relative;
+	aspect-ratio: 1;
+	background-color: pink;
+
+	cursor: pointer;
+	transition: 300ms;
+}

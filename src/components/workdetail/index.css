@@ -1,0 +1,79 @@
+.detail_container {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #00000090;
+
+	visibility: hidden;
+	opacity: 0;
+	transition: 300ms;
+}
+
+.detail_container.show {
+	visibility: visible;
+	opacity: 1;
+}
+
+.detail_container>.modal {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	width: calc(90% - 0.8rem);
+	max-width: 500px;
+	height: auto;
+	padding: 0.4rem;
+	background-color: #393939;
+
+	border-radius: 8px;
+}
+
+.detail_container>.modal>img {
+	width: 100%;
+	border-radius: 4px;
+}
+
+.detail_container>.modal>.bottom_section {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	padding: 0.4rem 0 0.1rem 0;
+	width: 100%;
+}
+
+.detail_container>.modal>.bottom_section>span {
+	color: #FDCDDC;
+	font-size: 15.6px;
+	font-weight: 500;
+	letter-spacing: 0.4px;
+	line-height: 23px;
+
+	cursor: pointer;
+	transition: 300ms;
+}
+
+.detail_container>.modal>.bottom_section>span:hover {
+	color: #EB8AA6;
+}
+
+.detail_container>.modal>.bottom_section>.close_btn {
+	width: 24px;
+	height: 24px;
+	color: #FDCDDC;
+
+	cursor: pointer;
+	transition: 300ms;
+}
+
+.detail_container>.modal>.bottom_section>.close_btn:hover {
+	transform: rotate(-90deg);
+	color: #EB8AA6;
+}

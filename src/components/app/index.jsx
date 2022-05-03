@@ -7,6 +7,7 @@ import Header from '../header';
 import Home from '../../views/home';
 import About from '../../views/about';
 import Skills from '../../views/skills';
+import Work from '../../views/work';
 import Contact from '../../views/contact';
 
 import './index.css';
@@ -31,7 +32,7 @@ const Component = () => {
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
             <Route path='/skills' element={<Skills />} />
-            {/* <Route path='/portfolio' element={<Core page='0' />} /> */}
+            <Route path='/work' element={<Work />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='*' element={<Navigate replace to='/' />} />
           </Routes>
