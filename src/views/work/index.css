@@ -1,24 +1,24 @@
 @media (min-width: 1201px) {
 	.work_container>.grid_zone {
-		grid-template-columns: repeat(auto-fill, calc(16.666666%));
+		grid-template-columns: repeat(auto-fill, calc(16.666666% - 0.2rem));
 	}
 }
 
 @media (min-width: 1001px) and (max-width: 1200px) {
 	.work_container>.grid_zone {
-		grid-template-columns: repeat(auto-fill, calc(20%));
+		grid-template-columns: repeat(auto-fill, calc(20% - 0.2rem));
 	}
 }
 
 @media (min-width: 601px) and (max-width: 1000px) {
 	.work_container>.grid_zone {
-		grid-template-columns: repeat(auto-fill, calc(25%));
+		grid-template-columns: repeat(auto-fill, calc(25% - 0.2rem));
 	}
 }
 
 @media (max-width: 600px) {
 	.work_container>.grid_zone {
-		grid-template-columns: repeat(auto-fill, calc(33.3333333%));
+		grid-template-columns: repeat(auto-fill, calc(33.3333333% - 0.2rem));
 	}
 }
 
@@ -96,6 +96,7 @@
 
 .work_container>.grid_zone {
 	display: grid;
+	gap: 0.2rem;
 
 	margin-right: auto;
 	padding: 2rem 0 1rem 0;
@@ -112,7 +113,13 @@
 	
 	position: relative;
 	aspect-ratio: 1;
-	background-color: pink;
+
+	border: 2px solid;
+	border-image: linear-gradient(to top right, #EB5586, #FFCDF3, #F5E6E9, #FFCDF3, #EB5586);
+	border-image-slice: 1;
+
+	font-family: 'La Belle Aurore', cursive;
+	font-size: 0.9rem;
 
 	cursor: pointer;
 	transition: 300ms;
