@@ -122,5 +122,12 @@
 	font-size: 0.9rem;
 
 	cursor: pointer;
-	transition: 300ms;
+	transition: 800ms;
+}
+
+.work_container>.grid_zone>div:hover {
+	font-size: 0.95rem;
+	color: #EB5586;
+	background-color: #F5E6E9;
+	opacity: 0.8;
 }

@@ -30,6 +30,26 @@
 	}
 }
 
+@media (min-height: 801px) {
+	.section_home_main_info>.profile_zone {
+		margin-top: 0;
+	}
+
+	.section_home_main_info>.text_zone {
+		margin-top: 0;
+	}
+}
+
+@media (max-height: 800px) {
+	.section_home_main_info>.profile_zone {
+		margin-top: 60px;
+	}
+
+	.section_home_main_info>.text_zone {
+		margin-top: 60px;
+	}
+}
+
 .section_home_main_info {
 	display: flex;
 	align-items: center;
