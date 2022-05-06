@@ -93,7 +93,7 @@
 	line-height: 23px;
 }
 
-.contact_container>.text_zone>.contact_form {
+.contact_container>.text_zone>.contact_form>.contact_button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -111,22 +111,22 @@
 	transition: 300ms;
 }
 
-.contact_container>.text_zone>.contact_form:hover {
+.contact_container>.text_zone>.contact_form>.contact_button:hover {
 	color: #FFCDF3;
 	box-shadow: 0 0.5rem 0.5rem -0.4rem #FFCDF3;
 	transform: translateY(-0.25em);
 }
 
-.contact_container>.text_zone>.contact_form:hover>span {
+.contact_container>.text_zone>.contact_form>.contact_button:hover>span {
 	animation: slide_effect 800ms ease-in-out infinite alternate;
 }
 
-.contact_container>.text_zone>.contact_form>span {
+.contact_container>.text_zone>.contact_form>.contact_button>span {
 	display: inline-block;
 	position: relative;
 }
 
-.contact_container>.text_zone>.contact_form>span::after {
+.contact_container>.text_zone>.contact_form>.contact_button>span::after {
 	position: absolute;
 	content: '\00bb';
 	opacity: 0;
@@ -135,7 +135,7 @@
 	transition: 300ms;
 }
 
-.contact_container>.text_zone>.contact_form:hover>span::after {
+.contact_container>.text_zone>.contact_form>.contact_button:hover>span::after {
 	opacity: 1;
 	visibility: visible;
 }
