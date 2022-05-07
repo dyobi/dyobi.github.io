@@ -1,0 +1,46 @@
+.contact_button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	margin: 30px 0 26px 0;
+	width: 8rem;
+	min-height: 1.9rem;
+	color: #EB5586;
+	font-size: 0.76rem;
+	border: 2px solid;
+	border-image: linear-gradient(to top right, #EB5586, #FFCDF3, #F5E6E9, #FFCDF3, #EB5586);
+	border-image-slice: 1;
+
+	cursor: pointer;
+	transition: 300ms;
+}
+
+.contact_button:hover {
+	color: #FFCDF3;
+	box-shadow: 0 0.5rem 0.5rem -0.4rem #FFCDF3;
+	transform: translateY(-0.25em);
+}
+
+.contact_button:hover>span {
+	animation: slide_effect 800ms ease-in-out infinite alternate;
+}
+
+.contact_button>span {
+	display: inline-block;
+	position: relative;
+}
+
+.contact_button>span::after {
+	position: absolute;
+	content: '\00bb';
+	opacity: 0;
+	right: -0.8rem;
+	visibility: hidden;
+	transition: 300ms;
+}
+
+.contact_button:hover>span::after {
+	opacity: 1;
+	visibility: visible;
+}

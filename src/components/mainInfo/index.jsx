@@ -1,5 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 
+import Button from '../button';
+
 import Image1 from '../../assets/images/img1.png';
 import Image2 from '../../assets/images/img2.png';
 import Image3 from '../../assets/images/img3.png';
@@ -47,9 +49,7 @@ const Component = () => {
 					<span>.</span>
 				</h1>
 				<p>Full Stack Developer / Creative Engineer</p>
-				<div className='contact_form' onClick={() => navigate('/contact')}>
-					<span>Contact me</span>
-				</div>
+				<Button onClick={() => navigate('/contact')} title='Contact me' />
 			</div>
 			<div className='profile_zone'>
 				<img className='profile_image' src={Image1} alt='' />

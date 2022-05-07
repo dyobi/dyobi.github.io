@@ -1,3 +1,5 @@
+import ContactForm from '../../components/contactform';
+
 import './index.css';
 
 const Component = () => {
@@ -19,14 +21,7 @@ const Component = () => {
 					<span>h</span>
 				</h2>
 				<span>I'm currently looking for any opportunities, my inbox is always open. Whether you have a question or just want to say hi, don't hesitate to contact me! I’ll try my best to get back to you.</span>
-				<div className='contact_form'>
-					<input type='text' name='name' />
-					<input type='email' name='email' />
-					<textarea name='content' />
-					<div className='contact_button'>
-						<span>Contact me</span>
-					</div>
-				</div>
+				<ContactForm />
 			</div>
 			<div className='location_zone'>
 				<div className='location_info'>
