@@ -19,26 +19,6 @@ body::-webkit-scrollbar {
     transition: 300ms;
 }
 
-/* body::before {
-    content: '<html>\a    <body>';
-	white-space: pre;
-    font-family: 'La Belle Aurore', cursive;
-    color: #515152;
-    font-size: 14px;
-    position: absolute;
-	transition: 300ms;
-} */
-
-/* body::after {
-    content: '    </body>\a</html>';
-	white-space: pre;
-    font-family: 'La Belle Aurore', cursive;
-    color: #515152;
-    font-size: 14px;
-    position: absolute;
-	transition: 300ms;
-} */
-
 @media (max-width: 360px) {
     html {
         font-size: 10px;
