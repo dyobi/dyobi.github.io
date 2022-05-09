@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { CgMenuGridO } from 'react-icons/cg';
 import $ from 'jquery';
+
+import MenuButton from '../menubutton';
 
 import Logo from '../../assets/icons/logo.png';
 import Github from '../../assets/icons/github.png';
@@ -19,7 +20,7 @@ const TopNav = () => {
 				<img src={Logo} className='nav_logo' alt='' />
 			</div>
 			<div className='top_nav_right'>
-				<CgMenuGridO className='nav_icon' />
+				<MenuButton />
 			</div>
 		</>
 	);

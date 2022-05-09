@@ -1,0 +1,57 @@
+.menu_button_container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 100%;
+	height: 100%;
+}
+
+.menu_button_container:hover {
+	animation: nav_icon_logo 500ms ease-in-out infinite alternate;
+}
+
+.menu_button {
+	width: 30px;
+	height: 23px;
+
+	transition: 300ms;
+}
+
+.menu_button>span {
+	display: block;
+
+	width: 30px;
+	height: 3px;
+
+	border-radius: 1.5px;
+	background-color: #FFFFFF;
+
+	transition: 500ms;
+}
+
+.menu_button>span:not(:last-child) {
+	margin-bottom: 7px;
+}
+
+.menu_button.active {
+	transition-delay: 200ms;
+	transform: rotate(50deg);
+}
+
+.menu_button.active>span:nth-child(2) {
+	width: 0;
+}
+
+.menu_button.active>span:nth-child(1),
+.menu_button.active>span:nth-child(3) {
+	transition-delay: 200ms;
+}
+
+.menu_button.active>span:nth-child(1) {
+	transform: translateY(10px);
+}
+
+.menu_button.active>span:nth-child(3) {
+	transform: translateY(-10px) rotate(80deg);
+}
