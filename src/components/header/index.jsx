@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import $ from 'jquery';
 
 import MenuButton from '../menubutton';
-import SideMenu from '../slidemenu';
+import SlideMenu from '../slidemenu';
 
 import Logo from '../../assets/icons/logo.png';
 import Github from '../../assets/icons/github.png';
@@ -21,13 +21,13 @@ const TopNav = () => {
 		
 		if (toggle) {
 			$('#menu_toggle').removeClass('active');
-			$('.slide_menu').css('opacity', '0');
-			$('.slide_menu').css('transform', 'translateX(100%)');
+			$('.slide_menu_container').css('opacity', '0');
+			$('.slide_menu_container').css('transform', 'translateX(100%)');
 			setToggle(!toggle);
 		} else {
 			$('#menu_toggle').addClass('active');
-			$('.slide_menu').css('opacity', '1');
-			$('.slide_menu').css('transform', 'translateX(0)');
+			$('.slide_menu_container').css('opacity', '1');
+			$('.slide_menu_container').css('transform', 'translateX(0)');
 			setToggle(!toggle);
 		}
 	}
@@ -40,7 +40,7 @@ const TopNav = () => {
 			<div className='top_nav_right'>
 				<MenuButton onClick={(e) => _handleToggle(e)} />
 			</div>
-			<SideMenu />
+			<SlideMenu close={(e) => _handleToggle(e)} />
 		</>
 	);
 };
