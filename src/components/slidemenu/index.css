@@ -1,0 +1,20 @@
+.slide_menu {
+	position: fixed;
+	top: 0;
+	right: 0;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	width: 70%;
+	height: 100%;
+
+	background-color: #1D1D1D95;
+	opacity: 0;
+	z-index: 50;
+
+	transform: translateX(100%);
+	transition: 300ms;
+}
