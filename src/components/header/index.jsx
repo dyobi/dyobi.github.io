@@ -16,9 +16,7 @@ const TopNav = () => {
 	const navigate = useNavigate();
 	const [toggle, setToggle] = useState(false);
 
-	const _handleToggle = (e) => {
-		e.preventDefault();
-		
+	const _handleToggle = () => {
 		if (toggle) {
 			$('#menu_toggle').removeClass('active');
 			$('.slide_menu_container').css('opacity', '0');
@@ -38,9 +36,9 @@ const TopNav = () => {
 				<img src={Logo} className='nav_logo' alt='' />
 			</div>
 			<div className='top_nav_right'>
-				<MenuButton onClick={(e) => _handleToggle(e)} />
+				<MenuButton onClick={() => _handleToggle()} />
 			</div>
-			<SlideMenu close={(e) => _handleToggle(e)} />
+			<SlideMenu show={toggle} close={() => _handleToggle()} />
 		</>
 	);
 };
@@ -55,35 +53,42 @@ const SideNav = () => {
 		window.open(url, '_blank');
 	};
 
+	const _handleNavigate = (destination, e) => {
+		e.preventDefault();
+
+		navigate(`/${destination}`);
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	};
+
 	return (
 		<div className='side_nav'>
 			<div className='main_menu_top'>
-				<div className='main_menu_logo' onClick={() => navigate('/')}>
+				<div className='main_menu_logo' onClick={(e) => _handleNavigate('', e)}>
 					<img src={Logo} className='main_logo_img' alt='' />
 					<span>Luke</span>
 				</div>
 				<span>Web Developer</span>
 			</div>
 			<div className='main_menu'>
-				<div className='each_menu' onClick={() => navigate('/about')}>
+				<div className='each_menu' onClick={(e) => _handleNavigate('about', e)}>
 					<div>
 						<span className='first_letter'>A</span>
 						<span>bout</span>
 					</div>
 				</div>
-				<div className='each_menu' onClick={() => navigate('/skills')}>
+				<div className='each_menu' onClick={(e) => _handleNavigate('skills', e)}>
 					<div>
 						<span className='first_letter'>S</span>
 						<span>kills</span>
 					</div>
 				</div>
-				<div className='each_menu' onClick={() => navigate('/work')}>
+				<div className='each_menu' onClick={(e) => _handleNavigate('work', e)}>
 					<div>
 						<span className='first_letter'>W</span>
 						<span>ork</span>
 					</div>
 				</div>
-				<div className='each_menu' onClick={() => navigate('/contact')}>
+				<div className='each_menu' onClick={(e) => _handleNavigate('contact', e)}>
 					<div>
 						<span className='first_letter'>C</span>
 						<span>ontact</span>
