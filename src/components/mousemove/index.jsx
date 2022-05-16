@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { isMobile } from 'react-device-detect';
 
 const _initOscillator = (canvas) => {
 
@@ -211,7 +212,7 @@ const _initOscillator = (canvas) => {
 		}
 	};
 
-	if (ctx) {
+	if (ctx && !isMobile) {
 
 		window.requestAnimationFrame = (() => {
 			return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || ((fn) => {

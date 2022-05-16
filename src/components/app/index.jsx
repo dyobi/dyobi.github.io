@@ -1,6 +1,5 @@
 import Wrapper from 'react-div-100vh';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import { isMobile } from 'react-device-detect';
 
 import MouseMove from '../mousemove';
 import Header from '../header';
@@ -14,7 +13,6 @@ import Contact from '../../views/contact';
 import './index.css';
 
 const Component = () => {
-
   return (
     <Wrapper>
       <style>
@@ -26,7 +24,7 @@ const Component = () => {
 				`}
       </style>
       <BrowserRouter>
-        {!isMobile && <Header />}
+        <Header />
         <MouseMove />
         <div className='core'>
           <Routes>
