@@ -26,7 +26,7 @@ const Component = () => {
 			<div className='location_zone'>
 				<div className='location_info'>
 					<span>
-						Luke Kim,
+						Jacob Kim,
 						<br />
 						San Jose, California
 						<br />
