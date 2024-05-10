@@ -65,7 +65,7 @@ const SideNav = () => {
 			<div className='main_menu_top'>
 				<div className='main_menu_logo' onClick={(e) => _handleNavigate('', e)}>
 					<img src={Logo} className='main_logo_img' alt='' />
-					<span>Luke</span>
+					<span>Jacob</span>
 				</div>
 				<span>Web Developer</span>
 			</div>
