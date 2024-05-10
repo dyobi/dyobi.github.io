@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b54a6a72.css",
+    "main.js": "/static/js/main.8203f7a3.js",
+    "static/media/hypertube.png": "/static/media/hypertube.aee4edfd57882d250f87.png",
+    "static/media/foodie.png": "/static/media/foodie.2514bc0cab5138c8f5d2.png",
+    "static/media/musical.png": "/static/media/musical.8d66ebf9beedbad31276.png",
+    "static/media/onlineshop.png": "/static/media/onlineshop.b7be6f5a253374ca89fc.png",
+    "static/media/instademo.png": "/static/media/instademo.ecfc5f0a99232fedade6.png",
+    "static/media/location.png": "/static/media/location.8fb87bf0526c0d70f941.png",
+    "static/media/img2.png": "/static/media/img2.8015a99a32031bc628e6.png",
+    "static/media/img1.png": "/static/media/img1.668fdb3b05d97ccb34bd.png",
+    "static/media/img3.png": "/static/media/img3.8a4a3cadb4a150f88880.png",
+    "static/media/coaxer.png": "/static/media/coaxer.2b718d498a50f5f7a2f2.png",
+    "static/media/weather.png": "/static/media/weather.8f0271f640507e7f7498.png",
+    "static/media/triviagame.png": "/static/media/triviagame.9b3cdf41b2a969727f34.png",
+    "static/media/fastingtimer.png": "/static/media/fastingtimer.bcd5f52cf039e9bd2052.png",
+    "static/media/todo.png": "/static/media/todo.200ee525d7cf4ae62827.png",
+    "static/media/matcha.png": "/static/media/matcha.fd673dd89ab06c4e329d.png",
+    "static/media/logo.png": "/static/media/logo.eef1475bf7617ec860be.png",
+    "index.html": "/index.html",
+    "main.b54a6a72.css.map": "/static/css/main.b54a6a72.css.map",
+    "main.8203f7a3.js.map": "/static/js/main.8203f7a3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b54a6a72.css",
+    "static/js/main.8203f7a3.js"
+  ]
+}
